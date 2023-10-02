@@ -90,8 +90,40 @@ ECDSACoin is the second iteration of our digital cash project and shares many si
 
 One of the primary challenges that remain with ECDSACoin is addressing the issue of double spending. While our transition to ECDSA digital signatures has significantly reduced the risk of double spending compared to PNGCoin, it is not entirely eliminated.
 
-### Running PNGCoin
+### Running ECDSACoin
 
 The same as for PNGCoin.
+
+## BankCoin
+
+BankCoin is the third iteration of our digital cash project, and it is designed to address the double spend problem effectively. However, it comes with certain characteristics that set it apart from the previous coins.
+
+### Key Features:
+
+- **Double Spend Prevention:** BankCoin successfully solves the double spend problem, making it a more secure digital cash solution compared to its predecessors.
+
+### Characteristics:
+
+- **Transaction Construction Rigidity:** One notable characteristic of BankCoin is that it lacks flexibility in transaction construction. Unlike some other digital currencies, you cannot create complex transactions by combining multiple coins or paying multiple parties in a single transaction.
+
+- **Single Coin Transactions:** With BankCoin, each transaction typically involves a single coin. You cannot spend multiple coins in a single transaction, which simplifies the transaction process but limits flexibility.
+
+- **Labor-Intensive Transactions:** Paying with BankCoin can be labor-intensive compared to other digital currencies. The lack of flexibility in transaction construction means that users may need to perform multiple individual transactions for complex payment scenarios.
+
+### Running BankCoin
+
+To test and run BankCoin, you will need to set up a virtual environment and use pytest to run the provided test suite. Here are the steps:
+
+1. **Create a Virtual Environment:** The same as for PNGCoin
+
+2. **Install Dependencies:** The same as for PNGCoin
+
+3. **Run Tests with `pytest`:** Use pytest to run the test suite. Assuming you have a bankcoin.py file and a bankcoin_tests.py file containing your tests, you can run the tests by executing the following command:
+
+```bash
+    pytest bankcoin_tests.py
+```
+
+This will run the tests and provide you with feedback on the functionality of BankCoin.
 
 Feel free to experiment, learn, and make modifications to the code as part of your learning journey. While I am learning from this boot camp experience and not actively contributing to the code. By examining and understanding these problems, I can gain valuable insights into the challenges of digital cash systems, which will inform my learning journey as I progress through this Build-Bootcamp-DigitalCash experience.
