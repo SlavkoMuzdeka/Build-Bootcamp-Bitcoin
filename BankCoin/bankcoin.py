@@ -76,6 +76,7 @@ class Bank:
 
         for tx_out in tx.tx_outs:
             out_sum += tx_out.amount
+        assert in_sum == out_sum
 
     def handle_tx(self, tx):
         # Save to self.utxo if it's valid
