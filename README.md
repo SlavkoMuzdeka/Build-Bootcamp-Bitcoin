@@ -148,4 +148,51 @@ BlockCoin is the fourth iteration of our digital cash project, introduced in res
 
 To run BlockCoin, you can follow the instructions provided in the documentation (likely using Docopt) associated with the codebase. The documentation should outline the steps for setting up and running the BlockCoin application.
 
+## POWCoin
+
+POWCoin, short for Proof of Work Coin, represents the fifth iteration of our digital cash project. This coin introduces the concept of a native internet protocol, addresses divisibility concerns, and seeks to solve the double-spending problem through a unique approach.
+
+### Key Features:
+
+- **Cryptographically Verifiable Transactions:** Similar to its predecessors, POWCoin features transactions that are cryptographically verifiable, ensuring security and integrity.
+
+- **Enhanced Divisibility:** POWCoin has the potential for good divisibility, both in terms of inputs and outputs. Being software-based, it can be divided into smaller units, increasing flexibility in transactions.
+
+- **Native Internet Protocol:** POWCoin operates on a native internet protocol, making transactions cheap and instant. This improvement enhances the efficiency and accessibility of transacting.
+
+- **Double-Spend Prevention via a Political Cartel:** Unlike a single central bank, POWCoin introduces a political cartel to prevent double-spending issues. While there are more checks-and-balances in place compared to a single bank, it is still susceptible to potential corruption and centralization.
+
+- **Resource-Driven Block Nomination:** To address centralization concerns, POWCoin introduces the concept of awarding block nomination privilege based on the consumption of a resource that cannot be easily monopolized. This approach aims to make the system censorship-resistant and Sybil-resistant.
+
+- **Miner Subsidies:** To prevent Sybil attacks and to incentivize participation, POWCoin awards block nomination privilege based on cryptographically proven SHA256 hashrate expenditure. Miners are also rewarded with a fixed number of coins for every mining race, ensuring that mining costs are recouped.
+
+- **Coinbase Transaction:** Miners add a special transaction known as the "coinbase transaction" when they construct a new block. This transaction pays the miner a preset number of coins and is handled separately in all transaction validation code.
+
+- **Joining the Network:** POWCoin outlines the process of adding and connecting new nodes to the network, allowing for peer-to-peer interactions among participants.
+
+- **Initial Block Download:** This section addresses how new participants can catch up with the network and download blocks efficiently. It describes a scheme for propagating blocks to new nodes.
+
+- **Nakamoto Consensus:** POWCoin introduces Nakamoto Consensus, a mechanism for tracking branches or forks in the blockchain and making decisions on block extensions, creation of new branches, or block rejections.
+
+### Running POWCoin
+
+To run the POWCoin application, you can follow these steps:
+
+1. Use the following command to build and start the POWCoin application using Docker Compose:
+
+```bash
+   docker-compose -f docker-compose-p2p.yml up --build
+```
+
+This command will initiate the POWCoin application using the specified Docker Compose configuration file. Please ensure that you have Docker and Docker Compose installed on your system before running this command.
+
+To run the tests, use a testing framework like pytest or your preferred testing tool. If you're using pytest, you can run the tests by executing the following command in your terminal:
+
+```bash
+    pytest powcoin_tests.py
+```
+
+This will run the test suite defined in powcoin_tests.py and provide you with feedback on the functionality of your POWCoin project.
+By running these tests, you can ensure that your POWCoin application functions as expected and verify its correctness.
+
 Feel free to experiment, learn, and make modifications to the code as part of your learning journey. While I am learning from this boot camp experience and not actively contributing to the code. By examining and understanding these problems, I can gain valuable insights into the challenges of digital cash systems, which will inform my learning journey as I progress through this Build-Bootcamp-DigitalCash experience.
