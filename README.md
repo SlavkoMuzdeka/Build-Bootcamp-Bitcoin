@@ -223,6 +223,18 @@ Bitcoin represents the latest evolution in our digital cash project, addressing 
 
 - **Dynamic Adjustment:** At the beginning of every new "difficulty period," Bitcoin calculates the duration of the previous difficulty period and compares it to the target. Based on this assessment, it makes adjustments to the mining problem by either making it easier or harder, influencing the mining difficulty bits for the next block.
 
+### Running Bitcoin
+
+To run the Bitcoin application, you can follow these steps:
+
+1. Use the following command to build and start the Bitcoin application using Docker Compose:
+
+```bash
+   docker-compose -f docker-compose.yml up --build
+```
+
+This command will initiate the POWCoin application using the specified Docker Compose configuration file. Please ensure that you have Docker and Docker Compose installed on your system before running this command.
+
 By implementing these solutions, Bitcoin aims to achieve a fixed terminal supply, eliminate the inflation problem over time, and ensure that the block production rate remains in line with the target block time.
 
 Feel free to experiment, learn, and make modifications to the code as part of your learning journey. While I am learning from this boot camp experience and not actively contributing to the code. By examining and understanding these problems, I can gain valuable insights into the challenges of digital cash systems, which will inform my learning journey as I progress through this Build-Bootcamp-DigitalCash experience.
