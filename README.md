@@ -195,4 +195,34 @@ To run the tests, use a testing framework like pytest or your preferred testing 
 This will run the test suite defined in powcoin_tests.py and provide you with feedback on the functionality of your POWCoin project.
 By running these tests, you can ensure that your POWCoin application functions as expected and verify its correctness.
 
+## Bitcoin
+
+Bitcoin represents the latest evolution in our digital cash project, addressing some key issues related to inflation and difficulty adjustment that were present in earlier coins.
+
+### Goals and Challenges:
+
+#### Global Inflation Problem:
+
+- **Issue with Fixed Terminal Supply:** Our previous coin, POWCoin, relied on inflation to incentivize mining participation. However, inflation can be seen as a form of wealth confiscation. To address this, Bitcoin aims to eliminate inflation over time, working toward a fixed terminal supply.
+
+- **Halving Block Subsidy:** The idea is to halve the block subsidy every N blocks until it reaches zero. This gradual reduction in the block subsidy encourages scarcity and ensures that the total supply doesn't increase indefinitely.
+
+- **Introduction of Miner Fees:** To gradually replace the block subsidy, Bitcoin introduces miner fees. These fees are the difference between the sum of transaction outputs and transaction inputs in a block. This change incentivizes miners to include high-fee transactions in their blocks.
+
+#### Local Inflation Problem:
+
+- **Block Production Speed:** Bitcoin recognizes that the rate at which miners are able to produce blocks can affect the overall supply. If the rate of block production increases significantly, inflation per unit time can also rise rapidly.
+
+#### Solution: Difficulty Adjustment
+
+- **Difficulty Periods:** Bitcoin introduces the concept of "difficulty periods," which are groupings of N blocks that start with the genesis block.
+
+- **Target Block Time:** It defines a "target block time" as M seconds, aiming to maintain a consistent pace of block creation.
+
+- **Target Duration:** The target duration of a "difficulty period" is N \* M. This duration is used to assess whether block production is too slow or too fast compared to the target.
+
+- **Dynamic Adjustment:** At the beginning of every new "difficulty period," Bitcoin calculates the duration of the previous difficulty period and compares it to the target. Based on this assessment, it makes adjustments to the mining problem by either making it easier or harder, influencing the mining difficulty bits for the next block.
+
+By implementing these solutions, Bitcoin aims to achieve a fixed terminal supply, eliminate the inflation problem over time, and ensure that the block production rate remains in line with the target block time.
+
 Feel free to experiment, learn, and make modifications to the code as part of your learning journey. While I am learning from this boot camp experience and not actively contributing to the code. By examining and understanding these problems, I can gain valuable insights into the challenges of digital cash systems, which will inform my learning journey as I progress through this Build-Bootcamp-DigitalCash experience.
